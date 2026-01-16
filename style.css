@@ -1,7 +1,7 @@
 :root {
   --cor-primaria: #1E3A8A; /* azul escola */
   --cor-secundaria: #000000; /* preto */
-  --cor-fundo: #f5f7fa; /* fundo mais suave */
+  --cor-fundo: #f5f7fa; /* fundo suave */
   --cor-texto: #111111;
   --cor-acucar: #F87171; /* vermelho para açúcar */
   --cor-gordura: #FBBF24; /* amarelo para gordura */
@@ -62,6 +62,7 @@ section {
   background-color: var(--cor-card);
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
 }
 
 .card:hover {
@@ -113,6 +114,23 @@ section {
 .btn-saibamais:hover {
   background-color: var(--cor-botao-hover);
   transform: scale(1.05);
+}
+
+/* Info extra expandível */
+.info-extra {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding: 0 5px;
+  margin-top: 10px;
+  color: #333;
+  background-color: #f0f4ff;
+  border-left: 4px solid var(--cor-primaria);
+  border-radius: 5px;
+}
+
+.info-extra.ativo {
+  padding: 10px 5px;
 }
 
 footer {
